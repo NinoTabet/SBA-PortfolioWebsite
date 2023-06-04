@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+/*----------All header elements---------*/
+h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to right, #856eed, #f6d3fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    white-space: nowrap;
+}
+.logo {
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+header{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 5px solid rgb(228, 187, 247,.35);
+    background-color: #000000;
+}
+header nav
+{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding:0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+header ul a
+{
+    text-decoration: none;
+    color: #f6d3fd;
+    padding: 0 1.5rem;
+    font-weight: 1000;
+    font-size: 0.83rem;
+}
+ul a:active{
+    color: #856eed;
+}
+
+/*----------All header elements (burger menu)----------*/
+.burgerMenu
+{
+    padding-left: 1.5rem;
+}
+.burgerMenu a
+{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: #f6d3fd;
+    justify-content: center;
+    align-items: center;
+}
+.burgerMenu .bar
+{
+    position: relative;
+    width: 52%;
+    height: 1.3px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+.burgerMenu .bar::before,
+.burgerMenu .bar::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1.5px;
+    width: 60%;
+    background-color: inherit;
+    border-radius: 2px;
+}
+.burgerMenu .bar::before {
+    top: -4px;
+}
+.burgerMenu .bar::after {
+    top: 4px;
+}
+
+/*----------Image carousel---------*/
+#image-carousel > a > .image{
+ width: 40vmin;
+ height: 56vmin;
+ object-fit: cover;
+ object-position: center center;
+}
+#image-carousel
+{
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    transform: translate(0%, -20%);
+    user-select: none; 
+}

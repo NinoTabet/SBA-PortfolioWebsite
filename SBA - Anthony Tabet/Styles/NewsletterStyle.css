@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+}
+
+/*----------All header elements (burger menu)----------*/
+h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to right, #856eed, #f6d3fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+video{
+    padding-top: 21.5%;
+    position:absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 300px;
+}
+.logo {
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+header{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 5px solid rgb(228, 187, 247,.35);
+    background-color: #000000;
+}
+header nav{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding:0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+header ul a{
+    text-decoration: none;
+    color: #f6d3fd;
+    padding: 0 1.5rem;
+    font-weight: 1000;
+    font-size: 0.83rem;
+}
+ul a:active{
+    color: #856eed;
+}
+
+/*----------All header elements (burger menu)----------*/
+.burgerMenu{
+    padding-left: 1.5rem;
+}
+.burgerMenu a{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: #f6d3fd;
+    justify-content: center;
+    align-items: center;
+}
+.burgerMenu .bar{
+    position: relative;
+    width: 52%;
+    height: 1.3px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+.burgerMenu .bar::before,
+.burgerMenu .bar::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1.5px;
+    width: 60%;
+    background-color: inherit;
+    border-radius: 2px;
+}
+.burgerMenu .bar::before {
+    top: -4px;
+}
+.burgerMenu .bar::after {
+    top: 4px;
+}
+
+/*----------Everything that is within the card exists here----------*/
+.card {
+    width: 800px;
+    position: absolute;
+    background-color: rgb(16 16 16);
+    border: 1px solid rgb(255 255 255 / 5%);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}  
+.card-content {
+    position: relative;
+    padding: 4rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    margin-top: 4rem;
+} 
+.card-content > :is(h1, p) {
+    text-align: center;
+} 
+.card-content > h1 {
+    color: rgb(250 249 246);
+    font-size: 2.6rem;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    white-space: nowrap;
+} 
+.card-content > p {
+    color: rgb(255 255 255 / 75%);
+    line-height: 1.5rem;
+    position: relative;
+    top: 50px;
+}
+
+/*----------Sizing table, size selector, and add to cart----------*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40%;
+}
+form{
+    width: 90%;
+    max-width: 600px;   
+}
+.input-group{
+    margin-bottom: 30px;
+    color: rgb(250, 249, 246);
+    position:relative;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #856eed;
+    color: rgb(250, 249, 246);
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: rgb(250, 249, 246);
+    cursor: text;
+    transition: .2s;
+}
+button{
+    padding: 10px 0;
+    color: rgb(250, 249, 246);
+    outline: none;
+    background: transparent;
+    border: 1px solid rgb(250, 249, 246);
+    width: 100%;
+    cursor: pointer;
+}
+input:focus~label,
+input:valid~label, 
+input.has-value~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px;
+}

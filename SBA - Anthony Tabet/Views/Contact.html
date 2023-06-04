@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="../Styles/ContactStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="../Content/Giuliano.jpg" alt="GIULIANO DI LALLO" class="logo">
+                <ul>
+                    <li>
+                        <a href="../Index.html">MAIN</a>
+                    </li>
+                    <li>
+                        <a href="About.html">ABOUT</a>
+                    </li>
+                    <li class="burgerMenu">
+                        <a href="#">
+                            <div class="bar"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 data-value = "CONTACT FORM" style="font-size: 60px;">CONTACT FORM</h1>
+        <div class ="hero">
+            <form>
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="8" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <script src = "../JS/ContactScript.js"></script>
+    </body>
+
+
+</html>
